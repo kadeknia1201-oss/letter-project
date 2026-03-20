@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Birthday Greeting</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { text-align: center; padding: 50px; }
+        .greeting { font-size: 24px; }
+        .theme-cream { background-color: #FFF5E1; color: #6A4C93; }
+        .theme-sepia { background-color: #F5F5DC; color: #5B3F24; }
+        .theme-floral { background-image: url('floral_background.jpg'); color: #4A4A4A; }
+        .theme-gold { background-color: #FFD700; color: #8B4513; }
+        .theme-vintage-blue { background-color: #B0E0E6; color: #003366; }
+        .theme-rose { background-color: #FFC0CB; color: #8B0000; }
+        .theme-sage { background-color: #E8E4D8; color: #5B8C4C; }
+        .theme-burgundy { background-color: #800020; color: #FFF; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="greeting">Happy Birthday!</h1>
+        <p class="greeting">Welcome to your vintage birthday greeting page. Choose a theme and enjoy the personalized message below!</p>
+        <select id="theme-selector">
+            <option value="theme-cream">Cream</option>
+            <option value="theme-sepia">Sepia</option>
+            <option value="theme-floral">Floral</option>
+            <option value="theme-gold">Gold</option>
+            <option value="theme-vintage-blue">Vintage Blue</option>
+            <option value="theme-rose">Rose</option>
+            <option value="theme-sage">Sage</option>
+            <option value="theme-burgundy">Burgundy</option>
+        </select>
+        <div id="greeting-area">
+            <p>Your customizable greeting text goes here!</p>
+        </div>
+    </div>
+    <script>
+        const themeSelector = document.getElementById('theme-selector');
+        const greetingArea = document.getElementById('greeting-area');
+
+        themeSelector.addEventListener('change', function() {
+            const selectedTheme = themeSelector.value;
+            greetingArea.className = selectedTheme;
+        });
+    </script>
+</body>
+</html>
